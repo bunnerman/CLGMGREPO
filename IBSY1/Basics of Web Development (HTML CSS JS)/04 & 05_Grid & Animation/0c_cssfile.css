@@ -1,0 +1,111 @@
+body
+{
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 90%);
+    font-family: 'Trebuchet MS', 'JetBrains Mono NL', 'Calibri';
+}
+section
+{
+    border: 4px groove hsl(135, 0%, 70%);
+    border-radius: 20px;
+    padding: 20px;
+}
+section:hover
+{
+    background-color: hsl(0, 0%, 12%);
+    border-radius: 5px;
+    transition-duration: 300ms;
+}
+table, th, td
+{
+    border: 1px solid hsl(0, 0%, 85%);
+    border-collapse: collapse;
+    padding: 10px;
+    th
+    {
+        background-color: hsl(210, 70%, 20%);
+    }
+}
+a
+{
+    color: hsl(210, 70%, 70%);
+    transition-duration: 300ms;
+    animation: link-anim 5s infinite;
+}
+@keyframes link-anim
+{
+    0% {font-size: 100%}
+    50% {font-size: 200%}
+    100% {font-size: 100%}
+}
+a:hover
+{
+    color: hsl(210, 100%, 50%);
+}
+img
+{
+    margin: 20px 0px;
+}
+button
+{
+    border: 2px solid hsl(0, 0%, 15%);
+    border-radius: 3px;
+    height: 50px;
+    width: 100px;
+    font-family: 'Trebuchet MS';
+    font-size: 140%;
+}
+button:hover
+{
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 90%);
+    transition-duration: 300ms;
+    border: 2px solid hsl(0, 0%, 90%);
+    border-radius: 20px;
+}
+
+@keyframes rgb-anim
+{
+0% {background-color: hsl(0, 100%, 20%)}
+10% {background-color: hsl(36, 100%, 20%)}
+30% {background-color: hsl(108, 100%, 20%)}
+40% {background-color: hsl(144, 100%, 20%)}
+50% {background-color: hsl(180, 100%, 20%)}
+70% {background-color: hsl(252, 100%, 20%)}
+80% {background-color: hsl(288, 100%, 20%)}
+90% {background-color: hsl(324, 100%, 20%)}
+100% {background-color: hsl(360, 100%, 20%)}
+}
+@keyframes rgb-anim-text
+{
+0% {color: hsl(0, 100%, 50%)}
+10% {color: hsl(36, 100%, 50%)}
+30% {color: hsl(108, 100%, 50%)}
+40% {color: hsl(144, 100%, 50%)}
+50% {color: hsl(180, 100%, 50%)}
+70% {color: hsl(252, 100%, 50%)}
+80% {color: hsl(288, 100%, 50%)}
+90% {color: hsl(324, 100%, 50%)}
+100% {color: hsl(360, 100%, 50%)}
+}
+
+.rgb-lighting
+{
+  animation: rgb-anim 10s infinite;
+}
+.rgb-lighting-text
+{
+    animation: rgb-anim-text 10s infinite;
+}
+.rgb-lighting-text-hovermode:hover
+{
+    animation: rgb-anim-text 2s infinite;
+    transition-duration: 10s;
+}
+
+.gridcon
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*fraction*/
+    gap: 20px;
+}
